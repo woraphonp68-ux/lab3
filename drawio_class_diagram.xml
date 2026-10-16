@@ -1,0 +1,35 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Note App Class Diagram" id="class-diagram">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- User Class -->
+        <mxCell id="user" value="&lt;b&gt;User&lt;/b&gt;&lt;hr&gt;&lt;div style=&quot;text-align: left;&quot;&gt;+ id: String&lt;br&gt;+ username: String&lt;br&gt;+ email: String&lt;br&gt;+ notes: MutableList&amp;lt;Note&amp;gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align: left;&quot;&gt;+ addNote(note: Note)&lt;br&gt;+ removeNote(noteId: String): Boolean&lt;br&gt;+ getTotalNotesCount(): Int&lt;br&gt;+ searchNotes(keyword: String): List&amp;lt;Note&amp;gt;&lt;/div&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;horizontalStack=0;resizeParent=1;resizeParentWeight=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=1;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="160" width="320" height="210" as="geometry" />
+        </mxCell>
+
+        <!-- Note Class -->
+        <mxCell id="note" value="&lt;b&gt;Note&lt;/b&gt;&lt;hr&gt;&lt;div style=&quot;text-align: left;&quot;&gt;+ id: String&lt;br&gt;+ title: String&lt;br&gt;+ content: String&lt;br&gt;+ createdDate: Date&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align: left;&quot;&gt;+ getSummary(): String&lt;/div&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;horizontalStack=0;resizeParent=1;resizeParentWeight=0;resizeLast=0;collapsible=1;marginBottom=0;rounded=1;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="160" width="260" height="160" as="geometry" />
+        </mxCell>
+
+        <!-- Relationship Line (Aggregation 1 to Many) -->
+        <mxCell id="edge1" value="" style="endArrow=diamondThin;endFill=0;endSize=16;html=1;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="user" target="note">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="label1" value="1" style="resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="edge1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="10" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label2" value="*" style="resizable=0;html=1;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="edge1">
+          <mxGeometry x="1" relative="1" as="geometry">
+            <mxPoint x="-10" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
